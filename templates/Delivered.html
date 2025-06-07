@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Delivered - Studeaze</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'DM Sans', Arial, sans-serif;
+        }
+
+
+
+        .order-items {
+            background-color: #f8f8fb;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .order-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; background-color: #f8f8fb; color: #333;">
+
+
+    <table align="center" width="100%" cellpadding="0" cellspacing="0"
+        style="max-width: 600px; margin: auto; background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+
+        <!-- Logo Section -->
+        <tr style="background-color: #6C4AB6;">
+            <td style="padding: 24px; text-align: center;">
+                <a href="https://studeaze.in" target="_blank">
+                    <svg width="60" height="60" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" fill="none" />
+                        <path
+                            d="M96.9588 72.3188V83.2601L63.9941 102.521L31.0294 83.2601V72.3118L18.6394 65.0716V90.5003L63.9941 117L109.349 90.5003V65.0804L96.9588 72.3188Z"
+                            fill="white" />
+                        <path
+                            d="M127.998 48.3973L63.9957 11L0 48.3973L63.9957 85.7876L76.3857 78.5492L63.9957 71.3108L24.7714 48.399L63.9957 25.4786L103.22 48.399L89.8063 56.2305L77.4094 63.4689L89.7994 70.716L102.196 63.4689L128 48.3973H127.998Z"
+                            fill="white" />
+                        <path
+                            d="M102.198 63.469L89.8085 56.2306L64.0306 41.1677L51.6492 48.3974L51.6406 48.4149L77.4116 63.469L89.7999 70.7162L102.198 63.469Z"
+                            fill="white" />
+                        <path d="M7.7427 47.8232H3.61328V81.7182H7.7427V47.8232Z" fill="white" />
+                        <path
+                            d="M5.68114 91.5191C3.62849 91.5191 1.96362 89.836 1.96362 87.7569V76.3463C1.96362 74.269 3.62849 72.5841 5.68114 72.5841C7.73378 72.5841 9.39865 74.269 9.39865 76.3463V87.7569C9.39865 89.8342 7.73378 91.5191 5.68114 91.5191Z"
+                            fill="white" />
+                    </svg>
+                </a>
+
+                <h1 style="color: #FFD700; margin: 0; font-size: 28px;">Delivered!</h1>
+                <p style="color: #fff; margin-top: 5px; font-size: 16px;">Time to Crack Open Your New Tools</p>
+            </td>
+        </tr>
+
+        <!-- Main Body -->
+        <tr>
+            <td style="padding: 24px;">
+                <p style="font-size: 16px; margin: 0 0 16px;">
+                    Heyy <strong>{{Customer_Name}}</strong>,
+                </p>
+                <p style="font-size: 16px; margin: 0 0 16px;">
+                    Your order has arrived! We hope you're as excited as we are. It's time to pull up your socks and get
+                    ready to conquer whatever comes next—your academic adventure starts now!
+                </p>
+
+                <h3 style="color: #6C4AB6; margin: 24px 0 8px;">📚 Your Order</h3>
+                <div class="order-items">
+                    {{#each Order_Items}}
+                    <div class="order-item">
+                        <p style="font-size: 15px; margin: 0;">{{this}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <p style="font-size: 15px; margin: 0 0 16px;">
+                    Got any feedback or need assistance? We're all ears and here to help you make the most of your
+                    resources.
+                </p>
+
+                <!-- Shop Now Button -->
+                <div style="text-align: center; margin: 24px 0;">
+                    <a href="https://studeaze.in/shop" target="_blank" style="
+                        background-color: #6C4AB6;
+                        color: #FFD700;
+                        text-decoration: none;
+                        font-size: 14px;
+                        padding: 8px 16px;
+                        border-radius: 20px;
+                        display: inline-block;
+                        font-weight: 500;
+                    ">
+                        Shop More
+                    </a>
+                </div>
+
+                <p style="font-size: 15px; margin: 0 0 24px;">
+                    Happy Studying!
+                </p>
+
+                <p style="font-size: 15px; margin: 0 0 4px;">Vinayak</p>
+                <p style="font-size: 15px; margin: 0 0 16px;">Founder & CEO, Studeaze</p>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr style="background-color: #f3efff;">
+            <td style="text-align: center; padding: 16px;">
+                <p style="font-size: 13px; color: #6C4AB6; margin: 0;">
+                    Studeaze &mdash; Built for Students, by Students
+                </p>
+                <p style="font-size: 12px; color: #999; margin: 4px 0 0;">© 2025 Studeaze. All rights reserved.</p>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
